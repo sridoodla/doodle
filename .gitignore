@@ -8,7 +8,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
+venv/
 build/
 develop-eggs/
 dist/
@@ -56,3 +56,10 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# IntelliJ
+.idea
+
+# Django Config
+*secret.py
+*development.py
