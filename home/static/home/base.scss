@@ -1,0 +1,109 @@
+#slide-out {
+  width: 120px;
+  background-color: #1C262B;
+}
+
+#slide-out {
+
+  a {
+    color: unset;
+    display: unset;
+    font-size: unset;
+    font-weight: unset;
+    height: unset;
+    line-height: unset;
+    padding: unset;
+  }
+
+  li {
+
+    .active {
+      background: lighten(#1C262B, 5%) !important;
+      span, i {
+        color: white !important;
+      }
+    }
+    div {
+      line-height: 30px;
+      text-align: center;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+
+    span {
+      display: block;
+      color: lighten(#1C262B, 60%);
+    }
+
+    i {
+      height: 30px;
+      line-height: 30px;
+      color: lighten(#1C262B, 60%);
+
+    }
+
+    &:hover:not(.nohover) {
+      span, i {
+        color: white;
+      }
+      background: lighten(#1C262B, 5%);
+    }
+
+  }
+
+  .social-icons {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+
+    img {
+      width: 20px;
+
+      &:hover {
+        transition: all .2s ease-in-out;
+        transform: scale(1.5);
+      }
+    }
+  }
+
+}
+
+.pic-n-name {
+
+  line-height: 0 !important;
+  padding: 0 !important;
+  span {
+    background: #2BA163;
+    display: block;
+    text-align: center;
+    line-height: 18px;
+    padding: 10px 0 10px 0;
+  }
+
+}
+
+nav {
+  background: transparent;
+}
+
+body {
+  padding-left: 120px;
+  background-color: darken(#345, 10%);
+}
+
+@media only screen and (max-width: 992px) {
+  body {
+    padding-left: 0
+  }
+
+  nav {
+    background: #1C262B;
+  }
+
+  h5 > span {
+    display: block;
+    margin: 0 0 15px 0
+  }
+}

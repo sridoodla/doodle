@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load static %}
+    {% load compress %}
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="I'm a full-stack developer with experience in Django.">
+    <meta name="subject" content="My personal website showcasing his Projects and Resume.">
+
+    <title>doodla {% if title %}| {{ title }}{% endif %}</title>
+
+
+    <link rel="me" href="https://github.com/sridoodla" type="text/html">
+    <link rel="me" href="mailto:v.sridhar.sreenivas@gmail.com">
+    <link rel="me" href="tel:+7164319167">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'home/lib/materialize/sass/materialize.css' %}">
+        <link rel="stylesheet" href="{% static 'home/base.css' %}">
+    {% endcompress %}
+</head>
+<body>
+
+<header>
+    <nav class="z-depth-0">
+
+        <ul id="slide-out" class="side-nav fixed">
+            <li>
+                <div class="pic-n-name">
+                    <img class="my-pic" style="width: 100%" src="{% static 'home/assets/images/me.png' %}" alt="">
+                    <span class="white-text my-name">Sridhar Vadlamani</span>
+                </div>
+            </li>
+            <li {% if home %}class="active"{% endif %}>
+                <a href="/">
+                    <div><i class="material-icons">home</i><span>HOME</span></div>
+                </a>
+            </li>
+            <li {% if about %}class="active"{% endif %}>
+                <a href="/about">
+                    <div><i class="material-icons">account_box</i><span>ABOUT</span></div>
+                </a>
+            </li>
+            <li {% if resume %}class="active"{% endif %}>
+                <a href="/resume">
+                    <div><i class="material-icons">chrome_reader_mode</i><span>RESUME</span></div>
+                </a>
+            </li>
+            <li {% if projects %}class="active"{% endif %}>
+                <a href="/projects">
+                    <div><i class="material-icons">code</i><span>PROJECTS</span></div>
+                </a>
+            </li>
+            <li {% if contact %}class="active"{% endif %}>
+                <a href="/contact">
+                    <div><i class="material-icons">phone</i><span>CONTACT</span></div>
+                </a>
+            </li>
+
+            <li class="nohover">
+                <div class="social-icons">
+                    <a href="https://fb.com/doodla" target="_blank"><img src="{% static 'home/assets/logos/facebook.svg' %}" alt=""></a>
+                    <a href="https://linkedin.com/in/doodla" target="_blank"><img src="{% static 'home/assets/logos/linkedin.svg' %}" alt=""></a>
+                    <a href="https://github.com/sridoodla" target="_blank"><img src="{% static 'home/assets/logos/github.svg' %}" alt=""></a>
+                </div>
+            </li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    </nav>
+</header>
+
+
+
+{% compress js %}
+    <script src="{% static 'home/lib/jquery-3.1.1.js' %}"></script>
+    <script src="{% static 'home/lib/materialize/js/bin/materialize.min.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav({draggable: true});
+        })
+    </script>
+{% endcompress %}
+</body>
+</html>
