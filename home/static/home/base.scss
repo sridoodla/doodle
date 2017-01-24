@@ -88,6 +88,11 @@ nav {
   background: transparent;
 }
 
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
 body {
   padding-left: 120px;
   background-color: darken(#345, 10%);

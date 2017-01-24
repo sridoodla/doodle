@@ -1,3 +1,33 @@
 {% extends "home/base.html" %}
 {% load static %}
 
+{% block styles %}
+
+    <link rel="stylesheet" href="{% static 'home/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="cover"></div>
+    <div class="overlay"></div>
+    <div class="header white-text center-align">
+        <h5><strong>Hi, I'm</strong></h5>
+        <h1><strong>Sridhar Vadlamani</strong></h1>
+        <h4>I'm <strong id="typist" data-typist="a Tech Enthusiast.,a Web Developer.,a Music Lover.,a Guitarist.,a Geek.">a Geek.</strong>
+        </h4>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="{% static 'home/lib/typist.js' %}"></script>
+
+    <script>
+        var typist = document.querySelector("#typist");
+        new Typist(typist, {
+            letterInterval: 60,
+            textInterval: 2000
+        });
+    </script>
+
+{% endblock %}
