@@ -17,11 +17,11 @@
 
   li {
 
-    .active {
-      background: lighten(#1C262B, 5%) !important;
+    &.current {
       span, i {
         color: white !important;
       }
+      background: lighten(#1C262B, 5%) !important;
     }
     div {
       line-height: 30px;

@@ -38,28 +38,28 @@
                     <span class="white-text my-name">Sridhar Vadlamani</span>
                 </div>
             </li>
-            <li {% if home %}class="active"{% endif %}>
-                <a href="/">
+            <li {% if home %}class="current"{% endif %}>
+                <a href="{% url 'home' %}">
                     <div><i class="material-icons">home</i><span>HOME</span></div>
                 </a>
             </li>
-            <li {% if about %}class="active"{% endif %}>
-                <a href="/about">
+            <li {% if about %}class="current"{% endif %}>
+                <a href="{% url 'about' %}">
                     <div><i class="material-icons">account_box</i><span>ABOUT</span></div>
                 </a>
             </li>
-            <li {% if resume %}class="active"{% endif %}>
-                <a href="/resume">
+            <li {% if resume %}class="current"{% endif %}>
+                <a href="{% url 'resume' %}">
                     <div><i class="material-icons">chrome_reader_mode</i><span>RESUME</span></div>
                 </a>
             </li>
-            <li {% if projects %}class="active"{% endif %}>
-                <a href="/projects">
+            <li {% if projects %}class="current"{% endif %}>
+                <a href="{% url 'projects' %}">
                     <div><i class="material-icons">code</i><span>PROJECTS</span></div>
                 </a>
             </li>
-            <li {% if contact %}class="active"{% endif %}>
-                <a href="/contact">
+            <li {% if contact %}class="current"{% endif %}>
+                <a href="{% url 'contact' %}">
                     <div><i class="material-icons">phone</i><span>CONTACT</span></div>
                 </a>
             </li>

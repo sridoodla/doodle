@@ -10,9 +10,9 @@
   height: unset;
   line-height: unset;
   padding: unset; }
-#slide-out li .active {
+#slide-out li.current {
   background: #26343a !important; }
-  #slide-out li .active span, #slide-out li .active i {
+  #slide-out li.current span, #slide-out li.current i {
     color: white !important; }
 #slide-out li div {
   line-height: 30px;
