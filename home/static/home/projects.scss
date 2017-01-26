@@ -1,3 +1,39 @@
-body{
+body {
   background: #60d7a9;
+}
+
+.container {
+  width: 90%;
+
+  .header i{
+    font-size: 50px;
+    color: #345;
+  }
+
+}
+
+.filters {
+
+  text-align: center;
+
+  li {
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+    margin: 0 15px;
+    display: inline;
+    cursor: pointer;
+    color: #EFEFEF;
+
+    &:hover {
+
+      color: lighten(#345, 15%);
+
+    }
+
+    &.active {
+      color: #345;
+    }
+  }
+
 }

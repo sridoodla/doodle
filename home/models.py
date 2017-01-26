@@ -1,3 +1,5 @@
+from django.db.models import CASCADE
+from django.db.models import ForeignKey
 from django.db.models import ManyToManyField
 from django.db.models import Model, CharField, TextField
 
@@ -7,12 +9,25 @@ from django.db.models import Model, CharField, TextField
 class Tag(Model):
     name = CharField(max_length=20)
 
+    def __str__(self):
+        return self.name
+
 
 class Project(Model):
-    name = CharField(max_length=60)
+    title = CharField(max_length=60)
+    subtitle = CharField(max_length=200)
+    image_file_name = CharField(max_length=40)
     description = TextField()
-    url = CharField(max_length=150, default='')
-    tag = ManyToManyField(Tag, related_name='projects', blank=True)
+    tags = ManyToManyField(Tag, related_name='projects', blank=True)
 
     def __str__(self):
-        pass
+        return self.title
+
+
+class Link(Model):
+    title = CharField(max_length=30)
+    url = CharField(max_length=200)
+    project = ForeignKey(Project, related_name='links', blank=True, null=True, on_delete=CASCADE)
+
+    def __str__(self):
+        return self.title

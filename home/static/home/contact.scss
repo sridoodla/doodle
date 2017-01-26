@@ -3,42 +3,65 @@ body {
   background-size: cover;
 }
 
-.container{
+.container {
   width: 90%;
+
+  .header i {
+    font-size: 50px;
+    color: #345;
+  }
+
 }
 
-.material-icons{
-  font-size: 50px;
-}
-
-.subtitle{
+.subtitle {
   font-size: 30px;
   display: block;
 }
 
-img{
-width: 50px;
+img {
+  width: 50px;
 }
+
+  #details {
+
+    i {
+      font-size: 50px;
+    }
+
+  }
+
 
 @media only screen and (max-width: 992px) {
 
-  .material-icons{
-    font-size: 30px;
+  #details {
+
+    i {
+      font-size: 30px;
+    }
+
   }
 
-  .title{
-    font-size: 28px;
-  }
+  .container {
+    .header {
+      i {
+        font-size: 30px;
+      }
+    }
 
-  .subtitle{
-    font-size: 20px;
-  }
-  img{
-    width: 30px;
-  }
+    .title {
+      font-size: 28px;
+    }
 
-  .section-title h2 {
-    font-size: 11px;
+    .subtitle {
+      font-size: 20px;
+    }
+    img {
+      width: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 11px;
+    }
   }
 
 }

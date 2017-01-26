@@ -17,20 +17,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
-from home.views import ContextTemplateView
+import home.views as views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', ContextTemplateView.as_view(template_name='home/index.html', extra_context={'title': 'Home',
-                                                                                           'home': True}), name='home'),
-    url(r'^about$', ContextTemplateView.as_view(template_name='home/about.html', extra_context={'title': 'About',
-                                                                                                'about': True}), name='about'),
-    url(r'^resume$', ContextTemplateView.as_view(template_name='home/resume.html', extra_context={'title': 'Resume',
-                                                                                                  'resume': True}), name='resume'),
-    url(r'^projects$', ContextTemplateView.as_view(template_name='home/projects.html', extra_context={'title': 'Projects',
-                                                                                                      'projects': True}), name='projects'),
-    url(r'^contact$', ContextTemplateView.as_view(template_name='home/contact.html', extra_context={'title': 'Contact',
-                                                                                                    'contact': True}), name='contact'),
+    url(r'^$', views.view_home, name='home'),
+    url(r'^about$', views.view_about, name='about'),
+    url(r'^resume$', views.view_resume, name='resume'),
+    url(r'^projects$', views.view_projects, name='projects'),
+    url(r'^contact$', views.view_contact, name='contact'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

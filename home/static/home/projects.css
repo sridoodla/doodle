@@ -1,4 +1,25 @@
 body {
   background: #60d7a9; }
 
+.container {
+  width: 90%; }
+  .container .header i {
+    font-size: 50px;
+    color: #345; }
+
+.filters {
+  text-align: center; }
+  .filters li {
+    text-transform: uppercase;
+    font-size: small;
+    font-weight: bold;
+    margin: 0 15px;
+    display: inline;
+    cursor: pointer;
+    color: #EFEFEF; }
+    .filters li:hover {
+      color: #506a85; }
+    .filters li.active {
+      color: #345; }
+
 /*# sourceMappingURL=projects.css.map */

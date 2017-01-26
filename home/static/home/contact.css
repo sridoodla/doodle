@@ -4,9 +4,9 @@ body {
 
 .container {
   width: 90%; }
-
-.material-icons {
-  font-size: 50px; }
+  .container .header i {
+    font-size: 50px;
+    color: #345; }
 
 .subtitle {
   font-size: 30px;
@@ -15,20 +15,22 @@ body {
 img {
   width: 50px; }
 
+#details i {
+  font-size: 50px; }
+
 @media only screen and (max-width: 992px) {
-  .material-icons {
+  #details i {
     font-size: 30px; }
 
-  .title {
+  .container .header i {
+    font-size: 30px; }
+  .container .title {
     font-size: 28px; }
-
-  .subtitle {
+  .container .subtitle {
     font-size: 20px; }
-
-  img {
+  .container img {
     width: 30px; }
-
-  .section-title h2 {
+  .container .section-title h2 {
     font-size: 11px; } }
 .overlay {
   background: #2E363A;

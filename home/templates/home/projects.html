@@ -6,7 +6,101 @@
 {% endblock %}
 
 {% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <div class="header">
+                    <i class="material-icons">code</i>
+                    <span class="title">my works</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <ul id="period" class="filters">
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".academia">Academia</li>
+                    <li data-filter=".professional">Professional</li>
+                    <li data-filter=".personal">Personal</li>
+                </ul>
+                <ul id="langs" class="filters">
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".python">Python</li>
+                    <li data-filter=".django">Django</li>
+                    <li data-filter=".web">Web</li>
+                    <li data-filter=".mobile">Mobile</li>
+                    <li data-filter=".android">Android</li>
+                    <li data-filter=".java">Java</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row project-group">
+                {% for project in projects %}
+                    <div class="col s6 m4 l3 project-item{% for tag in project.tags.all %} {{ tag.name }}{% endfor %}">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator"
+                                     src="
+
+                                             {% with 'home/assets/projects/'|add:project.image_file_name|add:'' as image_static %}{% static image_static %}{% endwith %}">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4 truncate">{{ project.title }}<i
+                                        class="material-icons right">more_vert</i></span>
+                                <p>{{ project.subtitle }}</p>
+                            </div>
+                            <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Doodle<i class="material-icons right">close</i></span>
+                                <p>{{ project.description }}</p>
+                                {% for link in project.links.all %}
+                                    <p><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block scripts %}
+    <script src="https://unpkg.com/isotope-layout@3.0.1/dist/isotope.pkgd.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var $isotope = $('.project-group').isotope({
+                // options
+                itemSelector: '.project-item',
+                layoutMode: 'masonry'
+            });
+
+            var period = $("#period").find("li");
+
+            $(period).click(function () {
+                $(period).removeClass('active');
+                $(this).addClass('active');
+
+                var filterValue = $(this).attr('data-filter');
+                $isotope.isotope({filter: filterValue});
+            });
+
+            var langs = $("#langs").find("li");
+
+            $(langs).click(function () {
+                $(langs).removeClass('active');
+                $(this).addClass('active');
+
+                var filterValue = $(this).attr('data-filter');
+                $isotope.isotope({filter: filterValue});
+            });
+
+
+        });
+
+
+    </script>
 {% endblock %}
