@@ -33,10 +33,12 @@
 
         <ul id="slide-out" class="side-nav fixed">
             <li>
-                <div class="pic-n-name">
-                    <img class="my-pic" style="width: 100%" src="{% static 'home/assets/images/me.png' %}" alt="">
-                    <span class="white-text my-name">Sridhar Vadlamani</span>
-                </div>
+                <a href="{% url 'home' %}">
+                    <div class="pic-n-name">
+                        <img class="my-pic" style="width: 100%" src="{% static 'home/assets/images/me.png' %}" alt="">
+                        <span class="white-text my-name">Sridhar Vadlamani</span>
+                    </div>
+                </a>
             </li>
             <li {% if home %}class="current"{% endif %}>
                 <a href="{% url 'home' %}">
@@ -60,7 +62,7 @@
             </li>
             <li {% if contact %}class="current"{% endif %}>
                 <a href="{% url 'contact' %}">
-                    <div><i class="material-icons">phone</i><span>CONTACT</span></div>
+                    <div><i class="material-icons">contact_phone</i><span>CONTACT</span></div>
                 </a>
             </li>
 

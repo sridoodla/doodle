@@ -1,0 +1,61 @@
+@import "timeline";
+
+body {
+  background: #EBF0DF;
+}
+
+.material-icons {
+  font-size: 50px;
+  color: #345;
+}
+
+.cv-dl {
+  width: 50px;
+  margin: 0 30px;
+}
+
+.card-subtitle {
+  display: block;
+  font-size: large;
+  font-weight: bold;
+}
+
+.skill {
+
+  span {
+    font-weight: 600;
+    font-size: small;
+    text-transform: uppercase;
+  }
+
+}
+
+.recommendation {
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+
+    &.name {
+      color: #345;
+      font-weight: bold;
+      font-size: large;
+    }
+
+    &.role {
+      color: grey;
+    }
+
+  }
+
+  p{
+    text-align: justify;
+  }
+
+}

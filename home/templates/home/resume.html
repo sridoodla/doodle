@@ -1,3 +1,271 @@
 {% extends "home/base.html" %}
 {% load static %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'home/resume.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 center">
+                <i class="material-icons">chrome_reader_mode</i>
+                <span class="title">resume</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 right-align">
+                <a target="_blank" href="{% static 'home/assets/resume/Resume.docx' %}"><img class="cv-dl" src="{% static 'home/assets/logos/docx.svg' %}"
+                                                                                             alt=""></a>
+            </div>
+            <div class="col s6 left-align">
+                <a target="_blank" href="{% static 'home/assets/resume/Resume.pdf' %}"><img class="cv-dl" src="{% static 'home/assets/logos/pdf.svg' %}" alt=""></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="section-title center">
+                    <h2>
+                        <span><strong>Work Experience</strong></span>
+                    </h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="timeline-content">
+                            <h3>SEP 2016 - Jan 2017</h3>
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Full Stack Developer</span>
+                                    <span class="card-subtitle"><a href="https://classavo.com" class="green-text text-darken-3">InteractiveX</a></span>
+                                    <ul class="browser-default">
+                                        <li>Improved the interactive content editor.</li>
+                                        <li>Deployed development servers and implemented methodologies to streamline development workflow.</li>
+                                        <li>Worked on integrating the Discourse forums with the IXLearn platform using SSO.</li>
+                                        <li>Implemented object level permissions for Instructors and Teaching Assistants.</li>
+                                        <li>Deployed REST web-services using the Django Rest Framework.</li>
+                                        <li>Coached and mentored 2 interns.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-badge"></div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-content">
+                            <h3>Jun 2016 - Aug 2017</h3>
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Software Development Intern</span>
+                                    <span class="card-subtitle"><a href="https://lumentum.com" class="green-text text-darken-3">Lumentum</a></span>
+                                    <ul class="browser-default">
+                                        <li>Built an Android app which allows users to contact the nearest Lumentum Security team based on the user’s
+                                            location.
+                                        </li>
+                                        <li>Worked closely with the HR team to create an Android application which significantly improved the onboarding
+                                            procedure for new employees.
+                                        </li>
+                                        <li>Built the back-end in NodeJS using Sails to create RESTful web services.</li>
+                                        <li>Developed and deployed dashboards for managing the data for the android applications.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-badge"></div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-content">
+                            <h3>Aug 2014 - Jul 2015</h3>
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Jr Software Developer</span>
+                                    <span class="card-subtitle"><a href="http://www.agilitylogistics.com/AgilityEServices/Pages/home.aspx"
+                                                                   class="green-text text-darken-3">Agility E Services Pvt Ltd</a></span>
+                                    <ul class="browser-default">
+                                        <li>Developed the Agility Logistics Windows Phone App.</li>
+                                        <li>Augmented the Hazard Identification Risk Assessment process by developing Take5.</li>
+                                        <li>Worked on the analytics dashboard for WeSafe, an application to improve workplace safety.</li>
+                                        <li>Developed the BBS application to improve workplace safety.</li>
+                                        <li>Also built the landing pages and dashboards for the above applications.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-badge"></div>
+                    </div>
+                </div>
+
+
+                <div class="section-title center">
+                    <h2>
+                        <span><strong>Education</strong></span>
+                    </h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <div class="timeline-content">
+                            <h3>SEP 2015 - Feb 2017</h3>
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">University at Buffalo</span>
+                                    <span class="card-subtitle">GPA - 3.15</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-badge"></div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-content">
+                            <h3>SEP 2010 - Mar 2014</h3>
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">Jawaharlal Nehru Technological University</span>
+                                    <span class="card-subtitle">GPA - 3.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-badge"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="section-title center">
+                    <h2>
+                        <span><strong>Coding Skills</strong></span>
+                    </h2>
+                </div>
+                <div class="container">
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Django</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML5</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>CSS</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL</span>
+                        <div class="progress">
+                            <div class="determinate" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="section-title center">
+                    <h2>
+                        <span><strong>Recommendations</strong></span>
+                    </h2>
+                </div>
+
+                <div class="container">
+
+                    <div class="recommendation">
+                        <a href="https://www.linkedin.com/in/ligouri-godwin-0520161b" target="_blank">
+                            <img class="circle img-responsive z-depth-3"
+                                 src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAhSAAAAJDAzZmJmYmZlLWZjY2MtNGRhYS05ZGM4LTc2ZmYwYTVhOTg2Mg.jpg"
+                                 alt="">
+                        </a>
+                        <span class="name">Ligouri Godwin</span>
+                        <span class="role">Senior Project Manager / Agility E Services Pvt Ltd</span>
+                        <a href="https://www.linkedin.com/in/doodla#recommendations" target="_blank">
+                            <div class="card">
+                                <div class="card-content">
+                                    <blockquote>
+                                        <p>Sridhar is an example for any employee whether they are in entry level or even a 10 year experienced person. His
+                                            understanding of business requirements, end to end ownership and good grasp of latest technologies is much
+                                            appreciated.
+                                            We, as a team have delivered projects in days and these were new platforms in Agility.</p>
+                                        <br>
+                                        <p>He works like a startup with no time constraints, no idea constraints and his drive to deliver a product is a big
+                                            differentiator</p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recommendation">
+                        <a href="https://www.linkedin.com/in/rohanms1" target="_blank">
+                            <img class="circle img-responsive z-depth-3"
+                                 src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAcfAAAAJDY5NWY0M2M2LWFiYzItNDI1NC1iMzRlLTM1NTgxM2Q3MzliZA.jpg"
+                                 alt="">
+                        </a>
+                        <span class="name">Rohan Shah</span>
+                        <span class="role">CEO / InteractiveX</span>
+                        <a href="https://www.linkedin.com/in/doodla#recommendations" target="_blank">
+                            <div class="card">
+                                <div class="card-content">
+                                    <blockquote>Sridhar is one of the best programmers and a team member at interactiveX. His dedication to the project and
+                                        accountability
+                                        are a
+                                        few
+                                        things that sets him apart from his peers. He is a problem solver and a great mentor to new trainees and hires. He takes
+                                        pride
+                                        in
+                                        his job and his work and ensures it's completion even if he is not involved directly in the project!
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recommendation">
+                        <a href="https://www.linkedin.com/in/rohanms1" target="_blank">
+                            <img class="circle img-responsive z-depth-3"
+                                 src="https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAdhAAAAJGU2NzlmOTIwLWY5MGQtNGQ1Ni1iMTY4LWM0ODNkNDhkZDMzNA.jpg"
+                                 alt="">
+                        </a>
+                        <span class="name">Josh Krouse</span>
+                        <span class="role">VP Research & Development / InteractiveX</span>
+                        <a href="https://www.linkedin.com/in/doodla#recommendations" target="_blank">
+                            <div class="card">
+                                <div class="card-content">
+                                    <blockquote>
+                                        <p>
+                                            Sridhar is one of the most ambitious and dedicated people that I have had the pleasure of working with. He has
+                                            great analytical thinking, very strong problem solving skills and extensive knowledge of web development that give
+                                            him a
+                                            definitive edge over his peers. He consistently exceeded the mark in terms of quality and delivery of his work. He
+                                            also
+                                            communicates his ideas for improvements clearly and with enthusiasm. Sridhar is definitely a great asset to have on
+                                            any
+                                            team!
+                                        </p>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

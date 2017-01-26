@@ -56,7 +56,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px;
+    padding: 10px;
 
     img {
       width: 20px;
@@ -88,7 +88,7 @@ nav {
   background: transparent;
 }
 
-html,body{
+html, body {
   height: 100%;
   width: 100%;
 }
@@ -96,6 +96,97 @@ html,body{
 body {
   padding-left: 120px;
   background-color: darken(#345, 10%);
+}
+
+.title {
+  font-size: 64px;
+  font-weight: bold;
+  display: block;
+  color: #345;
+
+}
+
+.section-title {
+  margin: 2em 0 2em;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  font-weight: bolder;
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  text-align: center;
+  box-shadow: 0 0 4px 0 #888888;
+
+}
+
+.section-title h2:after,
+.section-title h2:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: -.5em;
+  width: 2em;
+  height: 100%;
+  background-color: #7DB376;
+  pointer-events: none;
+  box-shadow: 0 0 4px 0 #888888;
+
+}
+
+.section-title h2:after {
+  right: -1.57em;
+  z-index: -1;
+}
+
+.section-title h2:before {
+  bottom: auto;
+  top: -.5em;
+  left: -1.57em;
+  z-index: -1;
+}
+
+.section-title h2 span {
+  display: inline-block;
+  position: relative;
+  padding: .8em 3em;
+  font-style: normal;
+  color: #fff;
+  background-color: #8ACB82;
+}
+
+.section-title h2 span:after, h2 span:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -.5em;
+  left: -.05em;
+  pointer-events: none;
+  -webkit-mask: none;
+}
+
+.section-title h2 span:before {
+  bottom: auto;
+  top: -.5em;
+  border-bottom: 0.5em solid #080b0c;
+  border-bottom: 0.5em solid rgba(8, 11, 12, 0.2);
+  border-left: .5em solid transparent;
+}
+
+.section-title h2 span:after {
+  left: auto;
+  right: -.05em;
+  border-top: 0.5em solid #080b0c;
+  border-top: 0.5em solid rgba(8, 11, 12, 0.2);
+  border-right: .5em solid transparent;
 }
 
 @media only screen and (max-width: 992px) {

@@ -1,0 +1,71 @@
+.timeline {
+  position: relative;
+}
+
+.timeline .timeline-event {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.timeline .timeline-event::after {
+
+  display: block;
+  content: "";
+  width: 4px;
+  height: 100%;
+  position: absolute;
+  background: #d2d2d2;
+  left: 18px;
+  top: 30px;
+}
+
+.timeline .timeline-event:last-child::after {
+  height: 75%;
+}
+
+.timeline .timeline-content {
+  margin-left: 50px;
+}
+
+.timeline .timeline-badge {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #2BA163;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: default;
+  box-shadow: 0 0 4px 0 #888888;
+}
+
+.timeline-event h3 {
+  display: inline-block;
+  position: relative;
+  padding: 3px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4em;
+  letter-spacing: 0;
+  margin: 0 0 0 20px;
+  box-shadow: 3px 3px 3px #888888;
+  text-transform: uppercase;
+  color: #fff;
+  background: #8ACB82;
+  top: 0;
+}
+
+.timeline-event h3:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border: 14px solid #8ACB82;
+  box-shadow: 3px 3px 3px #888888;
+  z-index: -1;
+  top: 0;
+  left: -1.6em;
+  border-left-color: transparent !important;
+}
