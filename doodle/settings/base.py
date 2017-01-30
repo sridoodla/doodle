@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
-    'home'
+    'home',
+    'analytical',
 ]
 
 MIDDLEWARE = [
@@ -170,3 +171,5 @@ STATICFILES_FINDERS = [
 
 # Django-Compressor
 COMPRESS_ENABLED = True
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-91117338-1'
