@@ -38,11 +38,12 @@
         <div class="container">
             <div class="row project-group">
                 {% for project in projects %}
-                    <div class="col s6 m4 l3 project-item{% for tag in project.tags.all %} {{ tag.name }}{% endfor %}">
-                        <div class="card">
+                    <div class="col s6 m4 l4 project-item{% for tag in project.tags.all %} {{ tag.name }}{% endfor %}">
+                        <div class="card sticky-action">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator"
                                      src="
+
 
                                              {% with 'home/assets/projects/'|add:project.image_file_name|add:'' as image_static %}{% static image_static %}{% endwith %}">
                             </div>
@@ -52,10 +53,16 @@
                                 <p>{{ project.subtitle }}</p>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Doodle<i class="material-icons right">close</i></span>
+                                <span class="card-title grey-text text-darken-4">{{ project.title }}<i class="material-icons right">close</i></span>
                                 <p>{{ project.description }}</p>
                                 {% for link in project.links.all %}
                                     <p><a href="{{ link.url }}" target="_blank">{{ link.title }}</a></p>
+                                {% endfor %}
+                            </div>
+
+                            <div class="card-action">
+                                {% for link in project.links.all %}
+                                    <a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
                                 {% endfor %}
                             </div>
                         </div>
