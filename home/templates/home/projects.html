@@ -33,6 +33,14 @@
                     <li data-filter=".android">Android</li>
                     <li data-filter=".java">Java</li>
                 </ul>
+                <ul id="years" class="filters">
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".2013">2013</li>
+                    <li data-filter=".2014">2014</li>
+                    <li data-filter=".2015">2015</li>
+                    <li data-filter=".2016">2016</li>
+                    <li data-filter=".2017">2017</li>
+                </ul>
             </div>
         </div>
         <div class="container">
@@ -43,6 +51,8 @@
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator"
                                      src="
+
+
 
 
                                              {% with 'home/assets/projects/'|add:project.image_file_name|add:'' as image_static %}{% static image_static %}{% endwith %}">
@@ -99,6 +109,16 @@
 
             $(langs).click(function () {
                 $(langs).removeClass('active');
+                $(this).addClass('active');
+
+                var filterValue = $(this).attr('data-filter');
+                $isotope.isotope({filter: filterValue});
+            });
+
+            var years = $("#years").find("li");
+
+            $(years).click(function () {
+                $(years).removeClass('active');
                 $(this).addClass('active');
 
                 var filterValue = $(this).attr('data-filter');
