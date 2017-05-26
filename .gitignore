@@ -65,6 +65,4 @@ target/
 *secret.py
 *development.py
 .DS_Store
-doodle/settings/template/development.template.cpgz
-doodle/settings/template/secret.template.cpgz
-logs/
+*.cpgz
